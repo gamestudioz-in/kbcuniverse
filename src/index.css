@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* We will bring the portrait lock back in Phase 2 once we know the UI renders! */
+body {
+  background-color: #000; /* Force black background natively just in case */
+}
