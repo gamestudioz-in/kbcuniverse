@@ -2582,7 +2582,7 @@ export const questions = {
     },
     { 
         question: "Which of these Indian cities is the capital of more than one state?", 
-        options: ["Hyderabad", "Chandigarh", "Mumbai", "Kolkata"], 
+        options: ["Hyderabad", "Kochi", "Mumbai", "Kolkata"], 
         answer: "Hyderabad" 
     },
     { 

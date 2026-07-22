@@ -13,6 +13,10 @@ public class MainActivity extends BridgeActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        // --- ADD THIS FLAG TO KEEP THE SCREEN ALWAYS ON ---
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        
         hideSystemUI();
     }
 
