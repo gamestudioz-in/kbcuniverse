@@ -484,7 +484,9 @@ export default function GameScreen({ onGameOver }) {
       {activeAskVideo && (
         <video 
           src={activeAskVideo} 
-          autoPlay 
+          autoPlay
+          playsInline
+          poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
           onEnded={() => {
             setActiveAskVideo(null);
             loadQuestion(currentLevel);
@@ -494,7 +496,7 @@ export default function GameScreen({ onGameOver }) {
             setActiveAskVideo(null);
             loadQuestion(currentLevel);
           }}
-          className="absolute inset-0 w-full h-full object-cover z-50"
+          className="absolute inset-0 w-full h-full object-cover bg-transparent z-50"
         />
       )}
 
@@ -502,13 +504,15 @@ export default function GameScreen({ onGameOver }) {
         <video 
           ref={videoRef}
           src={activeVideo} 
-          autoPlay 
+          autoPlay
+          playsInline
+          poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
           onEnded={handleVideoEnd}
           onError={() => {
             console.warn("Video failed to play, running fallback timer.");
             setTimeout(handleVideoEnd, 4000);
           }}
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          className="absolute inset-0 w-full h-full object-cover bg-transparent z-0"
         />
       )}
 
